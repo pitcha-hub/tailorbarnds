@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Eran Avshalom Ovsiovich · Tailor Brands POV</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#151313;
+  --muted:#5f5954;
+  --soft:#f7f2ec;
+  --cream:#fffaf2;
+  --peach:#ffb38a;
+  --coral:#ff7f5f;
+  --sand:#eadfd3;
+  --mint:#dff4dc;
+  --blue:#dcecff;
+  --lav:#efe7ff;
+  --card:#ffffff;
+  --line:rgba(21,19,19,.11);
+  --shadow:0 22px 70px rgba(36,25,15,.09);
+  --radius:28px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  color:var(--ink);
+  background:var(--cream);
+  line-height:1.45;
+  -webkit-font-smoothing:antialiased;
+}
+.nav{
+  position:fixed;top:18px;left:50%;transform:translateX(-50%);z-index:1000;
+  display:flex;align-items:center;gap:8px;
+  padding:8px 10px;background:rgba(255,250,242,.82);backdrop-filter:blur(18px);
+  border:1px solid rgba(21,19,19,.1);border-radius:999px;box-shadow:0 10px 28px rgba(20,18,15,.08);
+}
+.nav a{color:var(--muted);text-decoration:none;font-size:13px;font-weight:650;padding:9px 14px;border-radius:999px;white-space:nowrap;transition:.2s ease}
+.nav a:hover,.nav a.active{background:var(--ink);color:#fff}
+.nav .brand{font-weight:800;color:var(--ink);padding:8px 14px;margin-right:4px;border-right:1px solid var(--line)}
+section{position:relative;padding:112px 7vw;overflow:hidden}
+.wrap{max-width:1180px;margin:0 auto;position:relative;z-index:2}
+.hero{min-height:100vh;display:grid;place-items:center;background:
+  radial-gradient(circle at 12% 18%, rgba(255,179,138,.45), transparent 28%),
+  radial-gradient(circle at 82% 22%, rgba(223,244,220,.7), transparent 25%),
+  linear-gradient(180deg,#fffaf2 0%,#fff6ed 100%);
+}
+.hero .wrap{width:100%}
+.kicker{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.72);padding:9px 14px;color:var(--muted);font-size:13px;font-weight:700;margin-bottom:30px}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--coral);display:inline-block}
+h1{font-size:clamp(48px,7.2vw,104px);line-height:.98;letter-spacing:-.065em;font-weight:800;max-width:980px}
+.hero h1 span{display:block;color:var(--coral)}
+.hero-sub{font-size:clamp(20px,2vw,28px);max-width:760px;margin-top:34px;color:#2c2722;line-height:1.35;font-weight:500}
+.hero-sub strong{font-weight:800}
+.signature{display:flex;justify-content:space-between;gap:24px;align-items:flex-end;margin-top:72px;border-top:1px solid var(--line);padding-top:24px;color:var(--muted)}
+.signature strong{color:var(--ink)}
+.signature .role{text-align:right}
+.bg-shape{position:absolute;border-radius:38% 62% 52% 48%;opacity:.5;filter:blur(.2px);z-index:1}
+.bg-shape.one{width:280px;height:280px;background:var(--peach);right:-70px;bottom:80px;transform:rotate(-18deg)}
+.bg-shape.two{width:190px;height:190px;background:var(--mint);left:-50px;bottom:140px;transform:rotate(25deg)}
+.section-head{max-width:760px;margin-bottom:42px}
+.eyebrow{color:var(--coral);font-weight:800;font-size:13px;text-transform:uppercase;letter-spacing:.11em;margin-bottom:14px}
+h2{font-size:clamp(36px,4.4vw,64px);line-height:1.02;letter-spacing:-.045em;font-weight:800}
+.lead{font-size:22px;color:var(--muted);max-width:720px;margin-top:22px;line-height:1.5}
+.truths{background:#fff}
+.truth-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:44px}
+.truth-card{background:var(--soft);border:1px solid var(--line);border-radius:26px;padding:28px;min-height:230px;box-shadow:0 14px 34px rgba(20,18,15,.04)}
+.truth-card .label{font-size:13px;font-weight:800;color:var(--coral);text-transform:uppercase;letter-spacing:.09em;margin-bottom:18px}
+.truth-card p{font-size:23px;line-height:1.25;font-weight:700;letter-spacing:-.025em}
+.truth-card:nth-child(2){background:var(--mint)}
+.truth-card:nth-child(3){background:var(--blue)}
+.truth-card:nth-child(4){background:var(--lav)}
+.why-eran{background:var(--ink);color:#fff}
+.why-eran .eyebrow{color:var(--peach)}
+.why-eran h2{max-width:900px}
+.why-eran .lead{color:rgba(255,255,255,.76);font-size:26px;max-width:930px}
+.highlight{color:var(--peach);font-weight:800}
+.discipline-line{display:flex;gap:18px;flex-wrap:wrap;margin-top:42px}
+.discipline-line span{border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:12px 18px;color:#fff;background:rgba(255,255,255,.07);font-weight:700}
+.proofs{background:linear-gradient(180deg,#fffaf2,#fff)}
+.proof-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:42px;align-items:stretch}
+.proof{background:#fff;border:1px solid var(--line);border-radius:30px;padding:28px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:18px;min-height:620px}
+.proof .num{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:var(--ink);color:#fff;font-weight:800;margin-bottom:4px}
+.proof h3{font-size:32px;line-height:1.05;letter-spacing:-.04em}
+.proof .meta{font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--coral);font-weight:800}
+.proof p{font-size:16px;color:#4b4540;line-height:1.55}
+.proof p strong{color:var(--ink);font-weight:800}
+.proof .outcomes{margin-top:auto;background:var(--soft);border-radius:22px;padding:20px;border:1px solid var(--line)}
+.proof .outcomes div{font-size:15px;font-weight:700;margin-bottom:8px}
+.proof .outcomes div:last-child{margin-bottom:0}
+.founder{border-left:4px solid var(--coral);padding-left:14px;color:var(--muted);font-size:15px!important;font-style:italic}
+.pattern{background:#fff}
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:42px;align-items:center}
+.flow-card{background:var(--soft);border:1px solid var(--line);border-radius:28px;padding:32px 24px;min-height:170px;display:flex;flex-direction:column;justify-content:space-between}
+.flow-card h3{font-size:28px;line-height:1.1;letter-spacing:-.035em}
+.flow-card p{font-size:15px;color:var(--muted);font-weight:600;margin-top:20px}
+.arrow{font-size:40px;color:var(--coral);text-align:center;font-weight:800;display:none}
+.pattern-statement{margin-top:48px;background:var(--ink);color:#fff;border-radius:34px;padding:42px;display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
+.pattern-statement h3{font-size:42px;line-height:1.05;letter-spacing:-.045em}
+.pattern-statement p{color:rgba(255,255,255,.75);font-size:21px;line-height:1.45}
+.opportunity{background:var(--soft)}
+.opp-layout{display:grid;grid-template-columns:.9fr 1.1fr;gap:44px;align-items:center}
+.map{position:relative;min-height:560px;background:#fff;border:1px solid var(--line);border-radius:38px;box-shadow:var(--shadow);overflow:hidden;padding:34px}
+.map-center{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:210px;height:210px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;text-align:center;font-size:25px;font-weight:800;line-height:1.08;box-shadow:0 18px 48px rgba(21,19,19,.22);z-index:3}
+.node{position:absolute;background:var(--cream);border:1px solid var(--line);border-radius:999px;padding:15px 20px;font-weight:800;color:var(--ink);box-shadow:0 8px 24px rgba(20,18,15,.07);z-index:2}
+.node:after{content:"";position:absolute;width:85px;height:1px;background:rgba(21,19,19,.15);top:50%;left:50%;transform-origin:left center;z-index:1}
+.n1{left:40px;top:72px}.n1:after{transform:rotate(31deg)}
+.n2{right:42px;top:96px}.n2:after{transform:rotate(146deg);width:72px}
+.n3{left:30px;top:250px}.n3:after{transform:rotate(8deg);width:90px}
+.n4{right:34px;top:270px}.n4:after{transform:rotate(176deg);width:82px}
+.n5{left:68px;bottom:76px}.n5:after{transform:rotate(-31deg);width:78px}
+.n6{right:54px;bottom:74px}.n6:after{transform:rotate(214deg);width:82px}
+.opp-copy p{font-size:25px;line-height:1.35;color:#332d28;margin-bottom:20px;font-weight:650;letter-spacing:-.02em}
+.opp-copy p.muted{font-size:18px;font-weight:500;color:var(--muted);line-height:1.55}
+.close{min-height:76vh;display:grid;place-items:center;background:#fffaf2;text-align:center}
+.close h2{max-width:900px;margin:0 auto 42px}
+.close h2 span{color:var(--coral)}
+.contact{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;color:var(--muted);font-weight:700}
+.contact a{color:var(--ink);text-decoration:none;border-bottom:2px solid var(--coral)}
+@media(max-width:1050px){
+  .truth-grid,.proof-grid{grid-template-columns:1fr 1fr}
+  .flow{grid-template-columns:1fr 1fr}
+  .opp-layout,.pattern-statement{grid-template-columns:1fr}
+}
+@media(max-width:760px){
+  .nav{left:12px;right:12px;transform:none;overflow-x:auto;justify-content:flex-start;padding:7px}
+  .nav .brand{display:none}.nav a{font-size:12px;padding:8px 11px}
+  section{padding:88px 22px}
+  .hero{min-height:92vh}.hero-sub{font-size:20px}.signature{display:block}.signature .role{text-align:left;margin-top:14px}
+  .truth-grid,.proof-grid,.flow{grid-template-columns:1fr}
+  .truth-card{min-height:auto}.truth-card p{font-size:21px}
+  .proof{min-height:auto}.proof h3{font-size:29px}
+  .map{min-height:auto;padding:24px;display:grid;gap:12px}
+  .map-center{position:relative;left:auto;top:auto;transform:none;width:auto;height:auto;border-radius:26px;padding:28px;margin-bottom:12px}
+  .node{position:relative;left:auto!important;right:auto!important;top:auto!important;bottom:auto!important;text-align:center}
+  .node:after{display:none}
+  .pattern-statement{padding:30px}.pattern-statement h3{font-size:34px}.pattern-statement p{font-size:19px}
+}
+</style>
+</head>
+<body>
+<nav class="nav" aria-label="Page navigation">
+  <span class="brand">Eran × Tailor</span>
+  <a href="#why">Why</a>
+  <a href="#proof">Proof</a>
+  <a href="#pattern">Pattern</a>
+  <a href="#opportunity">Opportunity</a>
+  <a href="#connect">Connect</a>
+</nav>
+
+<section class="hero" id="top">
+  <div class="bg-shape one"></div><div class="bg-shape two"></div>
+  <div class="wrap">
+    <div class="kicker"><span class="dot"></span> Senior Channel & Business Development Manager</div>
+    <h1>Starting a business has never been easier.<span>Building one is still harder than it should be.</span></h1>
+    <p class="hero-sub"><strong>Tailor Brands removes friction from entrepreneurship.</strong><br>The best partnerships do the same.</p>
+    <p class="hero-sub" style="font-size:20px;color:var(--muted);max-width:680px">A short point of view on partnerships, growth, and helping more entrepreneurs move forward.</p>
+    <div class="signature">
+      <div><strong>Eran Avshalom Ovsiovich</strong><br>linkedin.com/in/eran-ovsiovich</div>
+      <div class="role">Built for Tailor Brands<br>June 2026</div>
+    </div>
+  </div>
+</section>
+
+<section class="truths" id="why">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Why this matters</div>
+      <h2>Growth gets easier when the path gets clearer.</h2>
+      <p class="lead">The role is not just about adding more partners. It is about building paths that help more business owners move forward with less friction.</p>
+    </div>
+    <div class="truth-grid">
+      <article class="truth-card"><div class="label">Company truth</div><p>Tailor Brands is not another tool. It is a guided path for people building a business.</p></article>
+      <article class="truth-card"><div class="label">Market truth</div><p>Entrepreneurs do not need more options. They need fewer moments of doubt.</p></article>
+      <article class="truth-card"><div class="label">Why now</div><p>The next wave of growth belongs to companies that remove friction before customers feel it.</p></article>
+      <article class="truth-card"><div class="label">Job truth</div><p>Partnerships are one of the fastest ways to remove friction at scale.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="why-eran">
+  <div class="wrap">
+    <div class="eyebrow">Why Eran</div>
+    <h2>I identify what keeps people, teams, and companies from moving forward.</h2>
+    <p class="lead">Then I build the <span class="highlight">partnerships</span>, <span class="highlight">experiences</span>, and <span class="highlight">growth motions</span> that remove that friction.</p>
+    <div class="discipline-line"><span>Different markets</span><span>Different challenges</span><span>Same discipline</span></div>
+  </div>
+</section>
+
+<section class="proofs" id="proof">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Proof points</div>
+      <h2>Three business capabilities. Three different contexts.</h2>
+      <p class="lead">The stories are different. The operating pattern is the same: understand the friction, design the motion, create movement.</p>
+    </div>
+    <div class="proof-grid">
+      <article class="proof">
+        <div class="num">01</div><div class="meta">Google Cloud Israel · Hummus API</div><h3>Creating Understanding</h3>
+        <p><strong>The market knew Google.</strong> It did not fully understand why Google Cloud mattered.</p>
+        <p>The challenge was not technology. It was perception.</p>
+        <p>Eran identified the gap and initiated a brand-led effort with Google Cloud leadership. The goal was not to explain cloud. It was to make Google Cloud easier to understand, remember, and talk about.</p>
+        <p>That became The Hummus API — a cultural entry point into a technical category.</p>
+        <div class="outcomes"><div>Hundreds of thousands of YouTube views.</div><div>Mainstream and technology media coverage.</div><div>Industry-wide conversation.</div></div>
+        <p class="founder">Founder POV: Growth often starts by helping the market understand the value already there.</p>
+      </article>
+      <article class="proof">
+        <div class="num">02</div><div class="meta">Google Cloud · Data Festival</div><h3>Driving Adoption</h3>
+        <p>For years, Google Cloud tried to win one of the largest freelancer marketplaces in the world.</p>
+        <p>The company was already operating on AWS. Another migration pitch would not move them.</p>
+        <p><strong>The gap was not capability.</strong> It was turning capability into competitive advantage.</p>
+        <p>Through deep discovery, Eran identified the real opportunity: 50+ developers needed tools, skills, and confidence to move two steps ahead of the competition.</p>
+        <p>So instead of another deck, he built the Data Festival: a two-day experience with live AI demos, hands-on workshops, specialists, executives, developers, music, food, and energy.</p>
+        <div class="outcomes"><div>12 AI initiatives launched.</div><div>Seven-figure cloud consumption followed.</div><div>The program became an EMEA blueprint.</div></div>
+        <p class="founder">Founder POV: People rarely change because they understand the plan. They change because they believe in the outcome.</p>
+      </article>
+      <article class="proof">
+        <div class="num">03</div><div class="meta">Google Cloud · Multi-Million Dollar Partnership</div><h3>Building Alignment</h3>
+        <p>A global retail unicorn had built a category-defining AI platform reshaping retail and CPG.</p>
+        <p>At first, the conversation was narrow: infrastructure, pricing, vendor selection.</p>
+        <p><strong>Eran saw a bigger opportunity.</strong> Why partner with Google Cloud instead of simply buying infrastructure?</p>
+        <p>He started with discovery: business objectives, growth strategy, product vision, competitive landscape, and long-term ambition.</p>
+        <p>The conversation moved from vendor evaluation to shared growth.</p>
+        <p>That became a custom global GTM motion: product collaboration, strategic customer access, shared pipeline, co-marketing, and mutual growth.</p>
+        <div class="outcomes"><div>A multi-million dollar strategic partnership followed.</div></div>
+        <p class="founder">Founder POV: The strongest partnerships do not start with a pitch. They start with understanding.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="pattern" id="pattern">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">One pattern</div>
+      <h2>Creating understanding. Driving adoption. Building alignment.</h2>
+      <p class="lead">Different industries. Different buyers. Different goals. The discipline remained the same.</p>
+    </div>
+    <div class="flow">
+      <div class="flow-card"><h3>Identify the friction</h3><p>What is stopping movement?</p></div>
+      <div class="flow-card"><h3>Understand the ambition</h3><p>What are they really trying to achieve?</p></div>
+      <div class="flow-card"><h3>Build the motion</h3><p>What creates progress for both sides?</p></div>
+      <div class="flow-card"><h3>Scale the outcome</h3><p>How does it become repeatable?</p></div>
+    </div>
+    <div class="pattern-statement">
+      <h3>Partnerships work when they remove friction from progress.</h3>
+      <p>That is the bridge between Tailor Brands, the role, and the work I have already done: finding the gap, building the motion, and helping people move forward faster.</p>
+    </div>
+  </div>
+</section>
+
+<section class="opportunity" id="opportunity">
+  <div class="wrap opp-layout">
+    <div class="opp-copy">
+      <div class="eyebrow">The Tailor opportunity</div>
+      <h2>Meet entrepreneurs where ambition already exists.</h2>
+      <p>Tailor Brands has already built the platform.</p>
+      <p>The opportunity now is helping entrepreneurs discover it where entrepreneurial ambition already exists.</p>
+      <p class="muted">Not by adding more channels. By building partnerships that remove friction before it appears.</p>
+      <p class="muted">The right partners do not just bring traffic. They bring entrepreneurs closer to progress.</p>
+    </div>
+    <div class="map" aria-label="Opportunity ecosystem map">
+      <div class="map-center">Entrepreneurial<br>Ambition</div>
+      <div class="node n1">Business Banking</div>
+      <div class="node n2">Freelance Platforms</div>
+      <div class="node n3">Creator Platforms</div>
+      <div class="node n4">Accounting</div>
+      <div class="node n5">AI Builder Tools</div>
+      <div class="node n6">SMB Communities</div>
+    </div>
+  </div>
+</section>
+
+<section class="close" id="connect">
+  <div class="wrap">
+    <h2>Every great partnership starts with the same question:<br><span>What are we trying to achieve together?</span></h2>
+    <div class="contact"><span>Eran Avshalom Ovsiovich</span><a href="https://www.linkedin.com/in/eran-ovsiovich" target="_blank" rel="noopener">linkedin.com/in/eran-ovsiovich</a></div>
+  </div>
+</section>
+<script>
+const links=[...document.querySelectorAll('.nav a')];
+const secs=links.map(a=>document.querySelector(a.getAttribute('href')));
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.classList.remove('active'));const i=secs.indexOf(e.target);if(links[i])links[i].classList.add('active')}})},{threshold:.42});
+secs.forEach(s=>s&&obs.observe(s));
+</script>
+</body>
+</html>
